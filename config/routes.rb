@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :clients
   get 'contacts/index'
   get 'projects/index'
   devise_for :users
