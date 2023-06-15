@@ -1,11 +1,12 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.3"
 
-set :application, "aditgo"
-set :repo_url, "git@example.com:me/aditgo.git"
+#set :application, "aditgo"
+#set :repo_url, "git@example.com:me/aditgo.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :branch, ENV['BRANCH'] || 'main'
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
@@ -43,4 +44,6 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 
 # Only keep the last 5 releases to save disk space
 set :keep_releases, 5
+set :application, "aditgo"
 
+set :repo_url, "git@github.com:adityaprastyo/aditgo.git"
