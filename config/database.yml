@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: Moon_production
-  username: Moon
+  username: deploy
   password: <%= ENV["MOON_DATABASE_PASSWORD"] %>
