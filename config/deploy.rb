@@ -13,7 +13,7 @@ set :branch, ENV['BRANCH'] || 'main'
 set :deploy_to, "/home/deploy/#{fetch :application}"
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
-
+append : linked_files, "config/master.key"
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
