@@ -61,3 +61,5 @@
 #   }
 
 server '172.16.3.45', user: 'deploy', roles: %w{app db web}
+set :rails_env, "production"
+set :stage, :production
