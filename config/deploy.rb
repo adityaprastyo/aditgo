@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.3"
 
-#set :application, "aditgo"
-#set :repo_url, "git@example.com:me/aditgo.git"
+set :application, "aditgo"
+set :repo_url, "git@github.com:adityaprastyo/aditgo.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -44,6 +44,3 @@ append :linked_files, "config/master.key"
 
 # Only keep the last 5 releases to save disk space
 set :keep_releases, 5
-set :application, "aditgo"
-
-set :repo_url, "git@github.com:adityaprastyo/aditgo.git"
